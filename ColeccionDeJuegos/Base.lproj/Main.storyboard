@@ -18,6 +18,32 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SjP-QI-pvj">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="0l9-Pf-CoJ" detailTextLabel="keD-wd-XiG" style="IBUITableViewCellStyleSubtitle" id="CC6-lx-qti">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="55.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CC6-lx-qti" id="uZR-Rd-0cb">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="55.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0l9-Pf-CoJ">
+                                                    <rect key="frame" x="20" y="10" width="33.5" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="keD-wd-XiG">
+                                                    <rect key="frame" x="20" y="31.5" width="33" height="14.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -32,7 +58,7 @@
                     <navigationItem key="navigationItem" id="7fa-eY-sXW">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="jP4-5y-LHK">
                             <connections>
-                                <segue destination="jsG-Ah-IJx" kind="show" id="Sc3-Mc-yXf"/>
+                                <segue destination="jsG-Ah-IJx" kind="show" identifier="s" id="Sc3-Mc-yXf"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -67,22 +93,36 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <pickerView contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="Tmq-Ln-MQj">
+                                <rect key="frame" x="47" y="369" width="320" height="216"/>
+                            </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oUl-zG-Deg">
-                                <rect key="frame" x="179.5" y="364" width="55" height="30"/>
+                                <rect key="frame" x="179.5" y="620" width="55" height="30"/>
                                 <state key="normal" title="Agregar"/>
                                 <connections>
                                     <action selector="agregarTapped:" destination="jsG-Ah-IJx" eventType="touchUpInside" id="jId-fq-4xI"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="reu-ib-jOu">
+                                <rect key="frame" x="179.5" y="665" width="55" height="30"/>
+                                <state key="normal" title="Eliminar"/>
+                                <connections>
+                                    <action selector="eliminarTapped:" destination="jsG-Ah-IJx" eventType="touchUpInside" id="7g7-pB-m2O"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="oUl-zG-Deg" firstAttribute="top" secondItem="t3S-Ho-Vwd" secondAttribute="bottom" constant="20" id="Bhq-yY-0Y6"/>
+                            <constraint firstItem="reu-ib-jOu" firstAttribute="centerX" secondItem="0pu-Pl-TNw" secondAttribute="centerX" id="96J-qf-Jup"/>
                             <constraint firstItem="oUl-zG-Deg" firstAttribute="centerX" secondItem="0pu-Pl-TNw" secondAttribute="centerX" id="HY4-4k-oqf"/>
+                            <constraint firstItem="Tmq-Ln-MQj" firstAttribute="top" secondItem="t3S-Ho-Vwd" secondAttribute="bottom" constant="25" id="M5t-NH-f41"/>
                             <constraint firstItem="t3S-Ho-Vwd" firstAttribute="top" secondItem="zJI-AT-LHr" secondAttribute="bottom" constant="34" id="UjZ-Ki-sxv"/>
+                            <constraint firstItem="Tmq-Ln-MQj" firstAttribute="centerX" secondItem="0pu-Pl-TNw" secondAttribute="centerX" id="UzM-81-o9a"/>
                             <constraint firstItem="t3S-Ho-Vwd" firstAttribute="width" secondItem="zJI-AT-LHr" secondAttribute="width" id="bV2-Xb-hMP"/>
+                            <constraint firstItem="oUl-zG-Deg" firstAttribute="top" secondItem="Tmq-Ln-MQj" secondAttribute="bottom" constant="35" id="be9-1g-vEb"/>
                             <constraint firstItem="zJI-AT-LHr" firstAttribute="centerX" secondItem="0pu-Pl-TNw" secondAttribute="centerX" id="bkX-qd-g7o"/>
                             <constraint firstItem="zJI-AT-LHr" firstAttribute="top" secondItem="0pu-Pl-TNw" secondAttribute="top" constant="32" id="dX5-zb-C07"/>
+                            <constraint firstItem="reu-ib-jOu" firstAttribute="top" secondItem="oUl-zG-Deg" secondAttribute="bottom" constant="15" id="oap-Y9-UCW"/>
                             <constraint firstItem="t3S-Ho-Vwd" firstAttribute="centerX" secondItem="0pu-Pl-TNw" secondAttribute="centerX" id="wbh-LY-dew"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0pu-Pl-TNw"/>
@@ -103,6 +143,9 @@
                     </navigationItem>
                     <connections>
                         <outlet property="JuegoImageView" destination="zJI-AT-LHr" id="tle-wS-yyN"/>
+                        <outlet property="agregarActualizarBoton" destination="oUl-zG-Deg" id="aEx-VE-6cz"/>
+                        <outlet property="eliminarBoton" destination="reu-ib-jOu" id="PmA-LR-rhp"/>
+                        <outlet property="pinker" destination="Tmq-Ln-MQj" id="a2e-Wk-TMF"/>
                         <outlet property="tituloTextField" destination="t3S-Ho-Vwd" id="KcR-ok-V2Z"/>
                     </connections>
                 </viewController>
