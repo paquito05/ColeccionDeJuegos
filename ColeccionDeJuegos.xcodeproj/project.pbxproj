@@ -14,6 +14,7 @@
 		F17D0D8027177F8800190257 /* ColeccionDeJuegos.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F17D0D7E27177F8800190257 /* ColeccionDeJuegos.xcdatamodeld */; };
 		F17D0D8227177F8900190257 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F17D0D8127177F8900190257 /* Assets.xcassets */; };
 		F17D0D8527177F8900190257 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F17D0D8327177F8900190257 /* LaunchScreen.storyboard */; };
+		F1AAEDE7271F987A0015FB1F /* JuegosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AAEDE6271F987A0015FB1F /* JuegosViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		F17D0D8127177F8900190257 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F17D0D8427177F8900190257 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F17D0D8627177F8900190257 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F1AAEDE6271F987A0015FB1F /* JuegosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JuegosViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				F17D0D7727177F8800190257 /* SceneDelegate.swift */,
 				F17D0D7927177F8800190257 /* ViewController.swift */,
 				F17D0D7B27177F8800190257 /* Main.storyboard */,
+				F1AAEDE6271F987A0015FB1F /* JuegosViewController.swift */,
 				F17D0D8127177F8900190257 /* Assets.xcassets */,
 				F17D0D8327177F8900190257 /* LaunchScreen.storyboard */,
 				F17D0D8627177F8900190257 /* Info.plist */,
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1AAEDE7271F987A0015FB1F /* JuegosViewController.swift in Sources */,
 				F17D0D7A27177F8800190257 /* ViewController.swift in Sources */,
 				F17D0D7627177F8800190257 /* AppDelegate.swift in Sources */,
 				F17D0D7827177F8800190257 /* SceneDelegate.swift in Sources */,
